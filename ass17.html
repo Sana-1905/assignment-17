@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <style>
+        .output {
+            border: 1px solid lightgreen;
+            padding: 15px 30px;
+        }
+
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="output">
+
+    <form action="submit.php" method="post">
+
+        <input type="text"
+               name="fullname"
+               placeholder="Full name"
+               required>
+        <br>
+
+        <input type="email"
+               name="email"
+               placeholder="you@college.edu"
+               required>
+        <br>
+
+        <input type="tel"
+               name="mobile"
+               placeholder="10-digit mobile"
+               pattern="[0-9]{10}"
+               title="Enter exactly 10 digits"
+               required>
+        <br>
+
+        <input type="password"
+               name="password"
+               placeholder="Min 6 characters"
+               minlength="6"
+               required>
+        <br>
+
+        <input type="number"
+               name="age"
+               placeholder="Age (17)"
+               max="30"
+               required>
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
